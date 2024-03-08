@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html{
+        background-color:#211951;
+      }
+      h1{
+        flex-basis:100%;
+        font-size:70px;
+      }
+      body {
+        font-family: "Sono", sans-serif;
+      }
+
+      .pricing-container{
+        display:flex;
+        gap:30px;
+        justify-content:center;
+        flex-flow: row wrap;
+        align-items: center;
+        height:fit-content;
+        text-align: center;
+        color: #F0F3FF;
+
+      }
+
+
+      .pricing-plan{
+        border:7px solid #15F5BA;
+        background-color: #836FFF;
+        border-radius:10px;
+        flex-basis: 250px;
+        max-width:350px;
+        min-width:30px;
+        padding:15px;
+        flex:1;
+
+      }
+      .plan-title{
+        padding-bottom:10px;
+      }
+      .plan-price{
+        font-size:2rem;
+        font-weight:bold;
+      }
+
+      .plan-features{
+        list-style-type: none;
+        text-align: center;
+        padding:0px;
+      }
+
+      .plan-button{
+        background-color:#211951;
+        color:#15F5BA;
+        font-weight:bold;
+        border-radius:5px;
+        height:35px;
+      }
+     
+      li{
+        padding:5px;
+      }
+
+
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1050px) {
+        .pricing-container{
+          flex-flow:column wrap;
+          height:fit-content
+        }
+
+
+        .footer{
+        margin:none;
+        }
+
+        }
+      
+      .footer{
+        flex-basis:100%;
+        font-size:small;
+        margin-top:22%;
+      }
+      /*[lightsalmon] Mobile Devices: 319px — 480px
+        [powderblue] iPads and Tablets: 481px — 1200px
+        [limegreen] Laptops: 1201px — 1600px
+        [seagreen] Desktops: 1601px and more 
+      */
+    </style>
+  </head>
+
+  <body>
+    
+    <div class="pricing-container">
+      <h1>SpaceStorage</h1>
+      <div class="pricing-plan">
+        <div class="plan-title">Basic</div>
+        <div class="plan-price">$11.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 10GB Storage</li>
+          <li>✅ 1 User</li>
+          <li>🚫 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up &#128640;</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Standard</div>
+        <div class="plan-price">$19.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 50GB Storage</li>
+          <li>✅ 5 Users</li>
+          <li>✅ Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button">Sign Up &#128640;</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Premium</div>
+        <div class="plan-price">$49.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 100GB Storage</li>
+          <li>✅ 10 Users</li>
+          <li>✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up &#128640;</button>
+      </div>
+      <div class="footer"> Copyright<span>&#169;</span> 2024 All Rights Reserved</div>
+    </div>
+  </body>
+</html>
